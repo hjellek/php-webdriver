@@ -1,6 +1,7 @@
 {
-    "name": "Facebook/php-webdriver",
-    "type": "library",
-    "description": "WebDriver bindings for PHP",
-    "keywords": ["WebDriver", "PHP"]
+    "name": "Facebook/php-webdriver",
+    "type": "library",
+    "description": "WebDriver bindings for PHP",
+    "keywords": ["WebDriver", "PHP"]
 }
+
