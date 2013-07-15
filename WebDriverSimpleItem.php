@@ -13,11 +13,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-require_once('WebDriverBase.php');
-require_once('WebDriver.php');
-require_once('WebDriverContainer.php');
-require_once('WebDriverSession.php');
-require_once('WebDriverElement.php');
-require_once('WebDriverEnvironment.php');
-require_once('WebDriverExceptions.php');
-require_once('WebDriverSimpleItem.php');
+final class WebDriverSimpleItem extends WebDriverBase {
+  private $_methods = array();
+  protected function methods() {
+    return $this->_methods;
+  }
+
+  public function setMethods($methods) {
+    $this->_methods = $methods;
+    return $this;
+  }
+}

@@ -13,11 +13,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-require_once('WebDriverBase.php');
-require_once('WebDriver.php');
-require_once('WebDriverContainer.php');
-require_once('WebDriverSession.php');
-require_once('WebDriverElement.php');
-require_once('WebDriverEnvironment.php');
-require_once('WebDriverExceptions.php');
-require_once('WebDriverSimpleItem.php');
+// For security reasons some enterprises don't allow the use of some built-in
+// php functions.  This class is meant to be a proxy for these functions.
+// Modify these as necessary for your enviroment, and then .gitignore this file
+// so you can still easily git pull other changes from the main github repo.
+
+final class WebDriverEnvironment {
+  public static function CurlExec($ch) {
+    return curl_exec($ch);
+  }
+}
